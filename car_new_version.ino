@@ -11,8 +11,7 @@ char Incoming_value;
 
 void setup() {
   Serial.begin(9600);
-  myServo.attach(pinServo);
-
+  
   for (int i = 0; i < 2; i++)
   {
     pinMode(motor_left[i], OUTPUT);
@@ -43,7 +42,7 @@ void loop(){
         break;
     }
   } 
-
+}
 void brake()
 {
   digitalWrite(motor_left[0], LOW);
